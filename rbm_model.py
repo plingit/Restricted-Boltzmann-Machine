@@ -81,7 +81,7 @@ class RBM:
         return update_op, acc
     
     def inference(self, v):
-         '''Inference step. Training samples are used to activate the hidden neurons which are used for calculation of input neuron values.
+        '''Inference step. Training samples are used to activate the hidden neurons which are used for calculation of input neuron values.
         This new input values are the prediction, for already rated movies as well as not yet rated movies
         
         @param v: visible nodes

@@ -1,8 +1,8 @@
 
-ROOT_DIR='C:/Users/Admin/Desktop/deep_learning _local_datasets/colaborative filtering/ml-1m/ratings.dat'
+ROOT_DIR='ml-1m/ratings.dat'
 
-OUTPUT_DIR_TRAIN='C:/Users/Admin/Desktop/deep_learning _local_datasets/colaborative filtering/ml-1m/train.dat'
-OUTPUT_DIR_TEST='C:/Users/Admin/Desktop/deep_learning _local_datasets/colaborative filtering/ml-1m/test.dat'
+OUTPUT_DIR_TRAIN='ml-1m/train.dat'
+OUTPUT_DIR_TEST='ml-1m/test.dat'
 
 
 NUM_USERS=6040
@@ -20,7 +20,7 @@ def _count_rating_per_user():
         line=line.split('::')
         user_nr=int(line[0])
         
-        if user_nr==user_counter:
+        if user_nr==user_counter and user_nr != NUM_USERS:
             rating_counter+=1
         else:
             rating_per_user[user_counter]=rating_counter
